@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body, h1, h2, p, ul, li, form {
+            margin: 0;
+            padding: 0;
+        }
+        h1,h2,h3,footer{
+            color: red;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        p{
+            padding-top: 20px;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(Image/pexels-mark-daiuto-750241\ \(2\).jpg);
+            background-size: cover;
+            background-position: center;
+            color: whitesmoke;
+        }
+
+        header {
+            background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45 ));
+            color: white;
+            border-bottom: 1px solid white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+            backdrop-filter: blur(4px);
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 27%;
+            margin-right: 27%;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: 0.6s;
+        }
+        nav a:hover{
+            color: rgb(255, 0, 0);
+        }
+        main {
+            padding: 20px;
+        }
+        input,textarea{
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            background: transparent;
+        }
+        
+        .complaint-form {
+            background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .Missing-person {
+            background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .local-announcements {
+            background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        p ion-icon{
+            padding-left: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        footer {
+            background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+            backdrop-filter: blur(4px);
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <title>Online Crime File Management</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Online Crime File Management</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#complaint-form">Report Crime</a></li>
+            <li><a href="#Missing-person">Missing Persons</a></li>
+            <li><a href="#local-announcements">Local Announcements</a></li>
+            <li><a href="logincrime.html">Login</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+    <main>
+        <section class="complaint-form" id="complaint-form">
+            <h2>Report a Crime or Complaint</h2>
+            <form action="submit_complaint" method="post">
+                <table>
+                    <tr>
+                        <td><label>Name: </label></td>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email: </label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Phone Number: </label></td>
+                        <td><input type="number" name="num" id="num"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Complaint: </label></td>
+                        <td><textarea name="textarea" id="textarea" cols="20" rows="3" placeholder="write your complaint!!!"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label>Address: </label></td>
+                        <td><textarea id="address" cols="20" rows="3" placeholder="address"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;"><input type="submit" value="Submit Complaint"></td>
+                    </tr>                
+                </table>
+            </form>
+        </section>
+        <section class="Missing-person" id="Missing-person">
+            <h2>Missing-person</h2>
+            <h3>Missing Person Details</h3>
+            <form action="person_details" method="post">
+                <table>
+                    <tr>
+                        <td>Name: </td>
+                        <td><input type="text" name="pname" id="pname"></td>
+                    </tr>
+                    <tr>
+                        <td>Age: </td>
+                        <td><input type="number" name="age" id="age"></td>
+                    </tr>
+                    <tr>
+                        <td>The day when he/she gone: </td>
+                        <td><input type="date" name="date" id="date"></td>
+                    </tr>
+                    <tr>
+                        <td>he/she lived location: </td>
+                        <td><input type="text" name="loc" id="loc"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Model: </td>
+                        <td><input type="text" name="pmodel" id="pmodel"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number: </td>
+                        <td><input type="number" name="pnum" id="pnum"></td>
+                    </tr>
+                    <tr>
+                        <td>Childhood Mark: </td>
+                        <td><input type="text" name="mark" id="mark"></td>
+                    </tr>
+                    <tr>
+                        <td>Specification: </td>
+                        <td><textarea name="specification" id="specification" cols="20" rows="3" placeholder="About him/her"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;"><input type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+        <section class="local-announcements" id="local-announcements">
+            <h2>Local Announcements</h2>
+            <p>
+                Notices can also be issued at the request of International Criminal Tribunals and the 
+                International Criminal Court to seek persons wanted for committing crimes within their jurisdiction, 
+                notably genocide, war crimes, and crimes against humanity. They can also be issued at the 
+                request of the United Nations in relation to the implementation of sanctions imposed by the Security Council.
+            </p>
+            <p>
+                Notices are issued by the General Secretariat at the request of a member country’s INTERPOL 
+                National Central Bureau and are made available for all our member countries to consult in our Notices database.
+            </p>
+            <p>
+                <ion-icon name="call-sharp" style="font-size: 24px;"></ion-icon> +91 942 0024 2000 
+                <ion-icon name="mail-sharp" style="font-size: 24px;"></ion-icon> tnpoliceind@gmail.com
+            </p>
+        </section>
+    </main>
+    </section>
+    <footer>
+        <p>&copy; 2023 Online Crime File Management</p>
+    </footer>
+</body>
+</html>

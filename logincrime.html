@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Crime Login Page</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        body{
+            background-image: url(Image/pexels-mark-750241.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        .container{
+            border: 1px solid white;
+            backdrop-filter: blur(4px);
+            border-radius: 10px;
+            margin-top: 10%;
+            margin-left: 35%;
+            margin-right: 35%;
+        } 
+        input{
+            border: 0;
+            border-bottom: 1px solid white;
+            padding: 0.5rem;
+            padding-right: 4rem;
+            background-color: transparent;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        label{
+            margin-left: -170px;
+        }
+        .imgcontainer{
+            margin: 24px 0 12px 0;
+        }
+        .avt{
+            width: 30%;
+            border-radius: 100%;
+        }
+        .link{
+            text-decoration: none;
+            transition: 0.8s;
+        }
+        .link:hover{
+            color: yellow;
+        }
+        button{
+            border: 1px solid white;
+            background: transparent;
+            border-radius: 5px;
+            padding: 0.8rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            transition: 0.6s;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        button:hover{
+            background: white;
+        }
+        a:hover{
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <div class="imgcontainer">
+            <img src="Image/man-avatar-profile-picture-vector-illustration_268834-541.avif" alt="avatar" class="avt">
+        </div>
+        <form action="logincrime">
+            <label>Username: </label><br>
+            <input type="text" name="uname" id="uname" placeholder="Username/Email"><br>
+            <label>Password: </label><br>
+            <input type="password" name="upass" id="upass" placeholder="Password"><br>
+        </form>
+        <button class="btn" type="submit"><a href="crime.html">Login</a></button><br>
+        <p ><a href="#" class="link">Forget Password?</a></p>
+        <p >Create an new Account? <a href="#" class="link">Sign up</a></p>
+    </div>
+</body>
+</html>
